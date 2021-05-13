@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row py-5">
+        <div class="col-6">
+            <form>
+                <div class="form-group">
+                    <label for="acc_no" ><b>Acc_No</b></label>
+                    <input type="number" name="acc_no" placeholder="Enter your own acc_no" [(ngModel)]="acc_no" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="name"><b>Name</b></label>
+                    <input type="text" name="name" placeholder="Enter your name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="password"><b>Password</b></label>
+                    <input type="password" name="password" placeholder="Enter password for your account" class="form-control" required>
+                </div>
+                <!--<div class="form-group">
+                    <label for="cash"><b>Balance</b></label>
+                    <input type="number" name="cash" value="0" class="form-control" required>
+                </div>-->
+
+                <div class="form-group">
+                    <label for="contact"><b>Phone</b></label>
+                    <input type="number" name="contact" placeholder="Enter your phone_no" class="form-control" required>
+                </div>
+
+                <div>
+                    <input class="btn btn-primary" type="submit" value="submit" name="submit" (click)="balance()"> 
+                </div>
+
+                <div class="display-4">
+                    Balance:{{amount}} 
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</div>

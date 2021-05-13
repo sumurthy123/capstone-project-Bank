@@ -1,0 +1,40 @@
+<h1 class="display-4">Enter admin details</h1>
+    <form>
+        <div class="form-group col-6">
+            <label for="name"><b>Name</b></label>
+            <input type="text" name="name" placeholder="Enter admin name" class="form-control" [(ngModel)]="name">
+        </div>
+ 
+        <div class="form-group col-6">
+            <label for="password"><b>Password</b></label>
+            <input type="password" name="password" placeholder="Enter admin password" class="form-control" [(ngModel)]="password">
+        </div>
+        <input type="submit" class="btn btn-primary ml-3" value="submit" name="Submit" (click)="validate()">
+
+    </form>
+
+    <h2 class="display-4">Result</h2>
+    <table class="table">
+        <thead>
+            <th>Acc_no</th>
+            <th>Name</th>
+            <th>password</th>
+            <th>Cash</th>
+            <th>Contact</th>
+            <th>Remove User</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                
+                <td>{{user.acc_no}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.password}}</td>
+                <td>{{user.cash}}</td>
+                <td>{{user.contact}}</td>
+                <td><button class="btn btn-danger" (click)="remove(user.acc_no)">Remove</button></td>
+                <td>{{msg}}</td>
+            </tr>
+            
+        </tbody>
+    </table>
+

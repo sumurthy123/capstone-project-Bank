@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="row py-3">
+        <div class="col-6">
+            <form>
+                <div class="form-group">
+                    <label for="acc_no">Your Acc_no</label>
+                    <input type="number" name="acc_no" [(ngModel)]="tr.sender_acc_no" class="form-control" placeholder="Enter your acc_no">
+                </div>
+
+                <div class="form-group">
+                    <label for="amount">Amount</label>
+                    <input type="number" name="amount" [(ngModel)]="tr.amount" class="form-control" placeholder="Enter the amount">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">password</label>
+                    <input type="number" name="password" [(ngModel)]="tr.password"  class="form-control" placeholder="Enter your acc password">
+                </div>
+
+                <div class="form-group">
+                    <label for="acc_no">Receiver Acc_no</label>
+                    <input type="number" name="acc_no" [(ngModel)]="tr.receiver_acc_no" class="form-control" placeholder="Enter your acc_no">
+                </div>
+                
+               
+                <div>
+                    <input type="submit" class="btn btn-primary" name="submit" value="submit" (click)="payment()">
+                    <input type="submit" class="btn btn-success ml-5" name="submit" value="view payment" (click)="viewpayment()">
+                </div>
+               <!-- <h1 class="display-4 text-align=center">{{msg}}</h1>-->
+               
+
+                
+            </form>
+
+            <table class="table">
+                <thead>
+                 <tr>
+                      <th>Sender acc_No</th>
+                      <th>Amount</th>
+                      <th>Password</th>
+                      <th>Receiver Acc_No</th>
+                     
+                 </tr>
+                 <tr>
+                      <td>{{msg.sender_acc_no}}</td>
+                      <td>{{msg.amount}}</td>
+                      <td>{{msg.password}}</td>
+                      <td>{{msg.receiver_acc_no}}</td>
+                 </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let m of msg">
+                    <td>{{m.sender_acc_no}}</td>
+                    <td>{{m.amount}}</td>
+                    <td>{{m.password}}</td>
+                    <td>{{m.receiver_acc_no}}</td>
+                    <td>hi</td>
+                   
+                </tr>
+               </tbody>
+            </table>
+            
+       </div>
+    </div>
+</div>
